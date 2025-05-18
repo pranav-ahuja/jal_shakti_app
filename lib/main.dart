@@ -1,0 +1,48 @@
+import 'package:jal_app/Pages/Jal_Dashboard/jal_add_location.dart';
+import 'package:jal_app/globals.dart';
+import 'package:flutter/material.dart';
+import 'package:jal_app/Pages/Jal_Home/jal_home.dart';
+import 'package:jal_app/Pages/Jal_Dashboard/jal_dashboard.dart';
+
+import 'Pages/Jal_Login/jal_login.dart';
+import 'Pages/Jal_Login/otp_verify.dart';
+import 'Pages/Jal_Signup/jal_signup.dart';
+
+void main() {
+  runApp(const The_Jal_App());
+}
+
+class The_Jal_App extends StatelessWidget {
+  const The_Jal_App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    screenWidth = MediaQuery.of(context).size.width;
+    screenHeight = MediaQuery.of(context).size.height;
+
+    return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        'app_main': (context) =>
+            Jal_App_Main(screenWidth: screenWidth, screenHeight: screenHeight),
+        'get_started': (context) => Jal_App_Main(
+              screenWidth: screenWidth,
+              screenHeight: screenHeight,
+            ),
+        'mobile_login': (context) => Jal_Login(),
+        'otp_verify': (context) => Jal_OTP_Verify(),
+        'sign_up': (context) => Jal_Signup(),
+        'jal_dashboard': (context) => Jal_Dashboard(),
+        'jal_add_location': (context) => Jal_Add_Location(),
+      },
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Jal_App_Main(
+          screenWidth: screenWidth,
+          screenHeight: screenHeight,
+        ),
+        // body: Jal_Started(),
+      ),
+    );
+  }
+}
