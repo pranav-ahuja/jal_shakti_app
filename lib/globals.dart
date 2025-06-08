@@ -18,6 +18,8 @@ Map<String, dynamic> app_data_base = {
   "last_name": "",
   "email_id": "",
   "location": "",
+  "pump_house": "",
+  "pump_number": "",
 };
 
 enum TextType {

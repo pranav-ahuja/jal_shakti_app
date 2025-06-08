@@ -5,27 +5,25 @@ import 'package:jal_app/globals.dart';
 
 import '../../Utility/common_classes_functions.dart';
 
-class Jal_Add_Location extends StatefulWidget {
-  const Jal_Add_Location({super.key});
+class Jal_Add_PumpHouse extends StatefulWidget {
+  const Jal_Add_PumpHouse({super.key});
 
   @override
-  State<Jal_Add_Location> createState() => _Jal_Add_LocationState();
+  State<Jal_Add_PumpHouse> createState() => _Jal_Add_PumpHouse();
 }
 
-class _Jal_Add_LocationState extends State<Jal_Add_Location> {
+class _Jal_Add_PumpHouse extends State<Jal_Add_PumpHouse> {
   final TextEditingController _search_location = TextEditingController();
   // final TextEditingController _last_name = TextEditingController();
   // final TextEditingController _email_id = TextEditingController();
 
-  String location = "";
-  String last_name_string = "";
-  String email_id_string = "";
+  String pump_house = "";
 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Add Location",
+          "Add Pump House",
           style: TextStyle(
             color: kPrimaryWhite,
           ),
@@ -42,10 +40,10 @@ class _Jal_Add_LocationState extends State<Jal_Add_Location> {
           children: [
             Jal_CreateTextField(
                 controller: _search_location,
-                text_field_label: "Enter Location",
+                text_field_label: "Enter Pump House",
                 text_field_color: kPrimaryWhite,
                 on_changed: (value) {
-                  location = value;
+                  pump_house = value;
                 }),
             Expanded(
               flex: 15,
@@ -59,8 +57,8 @@ class _Jal_Add_LocationState extends State<Jal_Add_Location> {
               button_text_size: 25.0,
               on_pressed: () {
                 setState(() {
-                  app_data_base["location"] = location;
-                  Navigator.pushNamed(context, 'add_pump_house');
+                  app_data_base["pump_house"] = pump_house;
+                  Navigator.pushNamed(context, 'add_pump');
                 });
               },
               button_color: kPrimaryBlue,

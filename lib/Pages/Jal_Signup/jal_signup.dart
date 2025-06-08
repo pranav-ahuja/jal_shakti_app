@@ -81,7 +81,7 @@ class _Jal_SignupState extends State<Jal_Signup> {
                     context: context,
                     button_text: "Sign Up",
                     button_width: screenWidth,
-                    button_height: screenHeight / 30,
+                    button_height: screenHeight / 17,
                     button_text_size: 25.0,
                     on_pressed: () {
                       setState(() {

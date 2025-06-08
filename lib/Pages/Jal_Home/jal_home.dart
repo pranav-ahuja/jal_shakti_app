@@ -40,7 +40,7 @@ class _Jal_App_MainState extends State<Jal_App_Main> {
                   context: context,
                   button_text: "Get Started",
                   button_width: screenWidth,
-                  button_height: screenHeight / 20,
+                  button_height: screenHeight / 17,
                   button_text_size: 25.0,
                   on_pressed: () {
                     Navigator.pushNamed(context, 'mobile_login');

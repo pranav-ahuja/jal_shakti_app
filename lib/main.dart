@@ -1,19 +1,20 @@
 import 'package:jal_app/Pages/Jal_Dashboard/jal_add_location.dart';
+import 'package:jal_app/Pages/Jal_Dashboard/jal_add_pumphouse.dart';
 import 'package:jal_app/globals.dart';
 import 'package:flutter/material.dart';
 import 'package:jal_app/Pages/Jal_Home/jal_home.dart';
 import 'package:jal_app/Pages/Jal_Dashboard/jal_dashboard.dart';
-
+import 'Pages/Jal_Dashboard/jal_add_pump_number.dart';
 import 'Pages/Jal_Login/jal_login.dart';
 import 'Pages/Jal_Login/otp_verify.dart';
 import 'Pages/Jal_Signup/jal_signup.dart';
 
 void main() {
-  runApp(const The_Jal_App());
+  runApp(The_Jal_App());
 }
 
 class The_Jal_App extends StatelessWidget {
-  const The_Jal_App({super.key});
+  The_Jal_App({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +35,8 @@ class The_Jal_App extends StatelessWidget {
         'sign_up': (context) => Jal_Signup(),
         'jal_dashboard': (context) => Jal_Dashboard(),
         'jal_add_location': (context) => Jal_Add_Location(),
+        'add_pump_house': (context) => Jal_Add_PumpHouse(),
+        'add_pump': (context) => Jal_Add_Pump_House_Number(),
       },
       debugShowCheckedModeBanner: false,
       home: Scaffold(

@@ -76,7 +76,7 @@ class _Jal_LoginState extends State<Jal_Login> {
                     ),
                     Jal_Elevated_Button(
                         context: context,
-                        button_height: screenHeight / 20,
+                        button_height: screenHeight / 17,
                         button_width: screenWidth,
                         button_text: "Verify",
                         button_text_size: 25.0,

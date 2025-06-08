@@ -2,30 +2,28 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jal_app/constant.dart';
 import 'package:jal_app/globals.dart';
-
 import '../../Utility/common_classes_functions.dart';
 
-class Jal_Add_Location extends StatefulWidget {
-  const Jal_Add_Location({super.key});
+class Jal_Add_Pump_House_Number extends StatefulWidget {
+  const Jal_Add_Pump_House_Number({super.key});
 
   @override
-  State<Jal_Add_Location> createState() => _Jal_Add_LocationState();
+  State<Jal_Add_Pump_House_Number> createState() =>
+      _Jal_Add_Pump_House_NumberState();
 }
 
-class _Jal_Add_LocationState extends State<Jal_Add_Location> {
+class _Jal_Add_Pump_House_NumberState extends State<Jal_Add_Pump_House_Number> {
   final TextEditingController _search_location = TextEditingController();
   // final TextEditingController _last_name = TextEditingController();
   // final TextEditingController _email_id = TextEditingController();
 
-  String location = "";
-  String last_name_string = "";
-  String email_id_string = "";
+  String pump_number = "";
 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Add Location",
+          "Add Pump Number",
           style: TextStyle(
             color: kPrimaryWhite,
           ),
@@ -42,10 +40,10 @@ class _Jal_Add_LocationState extends State<Jal_Add_Location> {
           children: [
             Jal_CreateTextField(
                 controller: _search_location,
-                text_field_label: "Enter Location",
+                text_field_label: "Enter Pump Number",
                 text_field_color: kPrimaryWhite,
                 on_changed: (value) {
-                  location = value;
+                  pump_number = value;
                 }),
             Expanded(
               flex: 15,
@@ -59,8 +57,12 @@ class _Jal_Add_LocationState extends State<Jal_Add_Location> {
               button_text_size: 25.0,
               on_pressed: () {
                 setState(() {
-                  app_data_base["location"] = location;
-                  Navigator.pushNamed(context, 'add_pump_house');
+                  app_data_base["pump_number"] = pump_number;
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    'jal_dashboard',
+                    (route) => false,
+                  );
                 });
               },
               button_color: kPrimaryBlue,
