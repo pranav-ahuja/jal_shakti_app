@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "67186491639",
+    "project_id": "waterapp-463817",
+    "storage_bucket": "waterapp-463817.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67186491639:android:d432ba0ee9bbaaeaf613f2",
+        "android_client_info": {
+          "package_name": "com.example.waterapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPgwpl7S2qaF0y0iXu9TUn4AhRWSv5vVk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

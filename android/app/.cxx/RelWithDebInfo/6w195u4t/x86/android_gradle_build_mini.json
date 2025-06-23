@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/home/pranav-ahuja/snap/flutter/common/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/pranav-ahuja/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/pranav-ahuja/Desktop/folder/Projects/flutter/waterapp/android/app/.cxx/RelWithDebInfo/6w195u4t/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/pranav-ahuja/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/pranav-ahuja/Desktop/folder/Projects/flutter/waterapp/android/app/.cxx/RelWithDebInfo/6w195u4t/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}
